@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- … -->
+  </head>
+  <body>
+    <h1>Custom Element</h1>
+    <div id="custom-element-placeholder">
+      <!-- … -->
+    </div>
+    <script type="module">
+      import * as importHTML from './js/modules/importHTML.js';
+    
+      const container = document.getElementById('custom-element-placeholder');
+    
+      importHTML.fromURL(container, './sample-custom-element.html');
+    </script>
+  </body>
+</html>

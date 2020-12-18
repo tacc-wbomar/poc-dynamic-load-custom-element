@@ -1,0 +1,14 @@
+{
+  "name": "dynamic-load-custom-element-poc",
+  "version": "1.0.0",
+  "description": "A PoC to load a custom element dynamically",
+  "dependencies": {
+    "serve": "^11.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "serve"
+  },
+  "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
+  "license": "ISC"
+}
