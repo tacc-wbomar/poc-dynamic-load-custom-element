@@ -7,6 +7,6 @@ A custom element can be built easy enough, but how to dynamically load it? This 
 1. `npm ci`
 2. `npm run start`
 3. Open https://localhost:5000/sample-custom-element.html.
-    - You should see text "I am content for a sample element."
+    - You __should__ see text "I am content for a sample element."
 4. Open https://localhost:5000/.
-    - You want to see text "I am content for a sample element."
+    - You __hope__ to see text "I am content for a sample element."
