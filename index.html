@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- … -->
+    <link href="./css/index.css" rel="stylesheet">
   </head>
   <body>
     <h1>Custom Element</h1>
-    <div id="custom-element-placeholder">
-      <!-- … -->
-    </div>
+    <div id="custom-element-placeholder"><!-- … --></div>
+
     <script type="module">
       import * as importHTML from './js/modules/importHTML.js';
-    
+      import * as registerCustomElement from './js/modules/registerCustomElement.js';
+
       const container = document.getElementById('custom-element-placeholder');
-    
-      importHTML.fromURL(container, './sample-custom-element.html');
+
+      importHTML.fromURL(container, './sample-custom-element.html', () => {
+        const template = document.getElementById('sample-custom-element');
+        registerCustomElement.fromTemplate('sample-custom-element', template);
+      });
     </script>
   </body>
 </html>
