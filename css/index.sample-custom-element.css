@@ -1,0 +1,17 @@
+sample-custom-element {
+    --color-one: yellow;
+    --color-two: olive;
+}
+sample-custom-element::part(one) {
+    color: var(--color-one);
+    text-decoration-style: solid;
+}
+sample-custom-element::part(two) {
+    color: var(--color-two);
+    text-decoration-style: solid;
+}
+
+sample-custom-element::part(one),
+sample-custom-element::part(two) {
+    text-decoration-line: underline;
+}
