@@ -25,17 +25,17 @@
     </div>
 
     <h2>Custom Element</h2>
-    <div id="custom-element-placeholder"></div>
+    <sample-custom-element class="sans-context-styles"></sample-custom-element>
+
+    <h2>Custom Element (With Context Styles)</h2>
+    <sample-custom-element class="with-context-styles"></sample-custom-element>
 
     <script type="module">
       import * as importHTML from './js/modules/importHTML.js';
       import * as registerCustomElement from './js/modules/registerCustomElement.js';
 
-      const container = document.getElementById('custom-element-placeholder');
-
-      importHTML.fromURL(container, './sample-custom-element.html', () => {
-        const template = document.getElementById('sample-custom-element');
-        registerCustomElement.fromTemplate('sample-custom-element', template);
+      importHTML.fromURL('./sample-custom-element.html').then(markup => {
+        registerCustomElement.fromHTMLString('sample-custom-element', markup);
       });
     </script>
   </body>

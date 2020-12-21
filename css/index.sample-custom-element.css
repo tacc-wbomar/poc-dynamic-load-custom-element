@@ -1,17 +1,15 @@
-sample-custom-element {
+/* Load this code inside <html> but outside <sample-custom-element> */
+/* This code would affect <sample-custom-element> via the <html> */
+
+sample-custom-element.with-context-styles {
     --color-one: yellow;
     --color-two: olive;
 }
-sample-custom-element::part(one) {
+sample-custom-element.with-context-styles::part(one) {
     color: var(--color-one);
-    text-decoration-style: solid;
+    text-decoration-style: double;
 }
-sample-custom-element::part(two) {
+sample-custom-element.with-context-styles::part(two) {
     color: var(--color-two);
-    text-decoration-style: solid;
-}
-
-sample-custom-element::part(one),
-sample-custom-element::part(two) {
-    text-decoration-line: underline;
+    text-decoration-style: double;
 }
