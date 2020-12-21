@@ -1,0 +1,6 @@
+:host {
+    --color: dodgerblue;
+}
+p {
+    color: var(--color);
+}

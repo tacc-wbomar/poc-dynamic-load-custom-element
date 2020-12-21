@@ -2,10 +2,26 @@
 <html>
   <head>
     <link href="./css/index.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        color: white;
+        background-color: black;
+
+        line-height: 1.4;
+      }
+    </style>
   </head>
   <body>
-    <h1>Custom Element</h1>
-    <div id="custom-element-placeholder"><!-- … --></div>
+    <h1>
+      <big>Proof of Concept:</big><br />
+      <span>Dynamically-Added Custom Element</span>
+    </h1>
+
+    <h2>Standard Element</h2>
+    <p>I am content for a <em>standard</em> element.</p>
+
+    <h2>Custom Element</h2>
+    <div id="custom-element-placeholder"></div>
 
     <script type="module">
       import * as importHTML from './js/modules/importHTML.js';
