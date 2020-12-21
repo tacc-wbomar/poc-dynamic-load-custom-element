@@ -23,13 +23,10 @@ export function fromHTMLString(name, html) {
  * @return {Element}
  */
 export function fromTemplate(name, template) {
-  console.log({template});
 
   window.customElements.define(name, class extends HTMLElement {
     constructor() {
       super();
-
-      console.log({content: template.content});
 
       this.attachShadow({ mode: "open" });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
