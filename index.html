@@ -34,7 +34,7 @@
       import * as importHTML from './js/modules/importHTML.js';
       import * as registerCustomElement from './js/modules/registerCustomElement.js';
 
-      importHTML.fromURL('./sample-custom-element.html').then(markup => {
+      importHTML.getFromURL('./sample-custom-element.html').then(markup => {
         registerCustomElement.fromHTMLString('sample-custom-element', markup);
       });
     </script>
